@@ -2,6 +2,7 @@ package c.s.poll
 
 
 import android.app.FragmentManager
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
@@ -62,7 +63,11 @@ class MainActivity : AppCompatActivity() {
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         val preferences = PreferenceManager.getDefaultSharedPreferences(this)
-
+        val status=preferences.getBoolean("status",false)
+        if(status==false){
+        val intent= Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+        }
         val fm=supportFragmentManager
         val ft=fm.beginTransaction()
         val fragment=poll()
