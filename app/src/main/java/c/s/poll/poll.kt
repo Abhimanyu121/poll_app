@@ -87,7 +87,7 @@ class poll : Fragment() {
            if (task.isSuccessful)
             {
               count=Integer.parseInt(task.result.getString("value").toString())
-                Log.e("stumble1",count.toString())
+                
                 create_view()
             }
         })
@@ -95,7 +95,7 @@ class poll : Fragment() {
         }
 
     fun create_view(){
-        Log.e("1","1")
+        
 
     var rcount=count
 
@@ -110,7 +110,7 @@ class poll : Fragment() {
             Log.e("val",f.toString())
             val linearcv=LinearLayout(getContext())
             linearcv.orientation=LinearLayout.VERTICAL
-            Log.e("group",group)
+            
             if(group.equals("a")){
                 db = FirebaseFirestore.getInstance().collection("polls_group_a").document(f.toString())
             adb=FirebaseFirestore.getInstance().collection("result_a").document(f.toString())}
