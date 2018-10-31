@@ -37,9 +37,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException
 
 import kotlinx.android.synthetic.main.activity_login.*
 
-/**
- * A login screen that offers login via email/password.
- */
+
 class LoginActivity : AppCompatActivity(){
 
 
